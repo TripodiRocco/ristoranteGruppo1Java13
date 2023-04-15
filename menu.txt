@@ -1,1 +1,15 @@
+Nome ristorante: ManJava
 
+Tipo menu: Carne
+// riportare qui le portate
+
+
+Bevande:
+- Acqua minerale
+- Amari
+- Liquori
+- Caffè
+- Thè ed infusi
+- Coca-Cola
+- Fanta
+- Sprite
