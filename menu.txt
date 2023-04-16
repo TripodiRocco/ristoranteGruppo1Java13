@@ -9,6 +9,12 @@ Primi Piatti:
 - Lasagne
 - Pappardelle al ragù di cinghiale
 
+Secondi Piatti:
+-Merluzzo
+-Involtini di vitello
+-Tortino di zucchine
+-Carne
+
 Bevande:
 - Acqua minerale
 - Amari
