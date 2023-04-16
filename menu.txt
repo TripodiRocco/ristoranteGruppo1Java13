@@ -2,7 +2,12 @@ Nome ristorante: ManJava
 
 Tipo menu: Carne
 // riportare qui le portate
-
+Primi Piatti:
+- Pasta in bianco
+- Trofie al pesto
+- Gnocchi alla romana
+- Lasagne
+- Pappardelle al ragù di cinghiale
 
 Bevande:
 - Acqua minerale
