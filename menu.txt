@@ -15,6 +15,12 @@ Secondi Piatti:
 -Tortino di zucchine
 -Carne
 
+Dessert:
+-Tiramisu'al coding
+-Parfait di mandorle e Stringhe
+-Tortino morbido al cioccolato fondente #000000
+-Sorbetto al limone in tazza di array[]
+
 Bevande:
 - Acqua minerale
 - Amari
