@@ -1,13 +1,15 @@
 Nome ristorante: ManJava
 
-Tipo menu: Carne
-// riportare qui le portate
+Menù
+
 Primi Piatti:
-- Pasta in bianco
-- Trofie al pesto
-- Gnocchi alla romana
-- Lasagne
-- Pappardelle al ragù di cinghiale
+
+- Pasta in bianco                   10€
+- Trofie al pesto                   9€
+- Gnocchi alla romana               8€
+- Lasagne                           7€
+- Pappardelle al ragù di cinghiale  6€
+
 
 Secondi Piatti:
 -Merluzzo
