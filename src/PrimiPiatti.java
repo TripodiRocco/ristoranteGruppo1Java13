@@ -45,6 +45,6 @@ public class PrimiPiatti {
 
             primoPiatto.setDescription("Pappardelle al ragù di cinghiale");
             primoPiatto.setPrice(13.00);
-            System.out.println(primoPiatto.getDescription() + "     € " + primoPiatto.getPrice());git
+            System.out.println(primoPiatto.getDescription() + "     € " + primoPiatto.getPrice());
       }
 }
