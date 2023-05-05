@@ -6,6 +6,7 @@ public class Main {
         System.out.println(nameOfRestaurant);
 
 
+
         //TODO eliminare tutte le chiamate statiche
         PrimiPiatti primiPiatti = new PrimiPiatti("Pasta", 10);
         PrimiPiatti primiPiatti2 = new PrimiPiatti("Pasta", 10);
@@ -13,6 +14,8 @@ public class Main {
 
         System.out.println();
         System.out.println("Prova");
+
+
 
         Bevande.stampaBevande();
 
