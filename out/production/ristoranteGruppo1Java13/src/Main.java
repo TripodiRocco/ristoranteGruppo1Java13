@@ -5,25 +5,24 @@ public class Main {
         String nameOfRestaurant = "Ristorante ManJava";
         System.out.println(nameOfRestaurant);
 
-        //TODO eliminare tutte le chiamate statiche
-        PrimiPiatti primiPiatti = new PrimiPiatti("Pasta", 10);
-        PrimiPiatti primiPiatti2 = new PrimiPiatti("Pasta", 10);
-        primiPiatti.printPrimiPiatti();
+        System.out.println();
 
+        Bevande bevanda1 = new Bevande("Acqua minerale", 1.00);
+        Bevande bevanda2 = new Bevande("Amari", 4.00);
+        Bevande bevanda3 = new Bevande("Liquori", 5.00);
+        Bevande bevanda4 = new Bevande("Caffè", 1.50);
+        Bevande bevanda5 = new Bevande("Thè ed infusi", 2.00);
+        Bevande bevanda6 = new Bevande("Coca cola", 3.00);
+        Bevande bevanda7 = new Bevande("Fanta", 3.00);
+        Bevande bevanda8 = new Bevande("Sprite", 3.00);
 
-
-
-
-        Bevande bevande = new Bevande("acqua",23);
-        bevande.stampaBevande();
-        Dessert tiramisu = new Dessert("Tiramisu'", 4.00);
-        Dessert parfait = new Dessert("Parfait di mandorle", 5.00);
-        Dessert tortino = new Dessert("Tortino morbido al cioccolato fondente", 3.20);
-        Dessert sorbetto = new Dessert("Sorbetto al limone", 2.00);
-
-        tiramisu.printDessert(tiramisu);
-        tiramisu.printDessert(parfait);
-        tiramisu.printDessert(tortino);
-        tiramisu.printDessert(sorbetto);
+        bevanda1.stampaBevande();
+        bevanda2.stampaBevande();
+        bevanda3.stampaBevande();
+        bevanda4.stampaBevande();
+        bevanda5.stampaBevande();
+        bevanda6.stampaBevande();
+        bevanda7.stampaBevande();
+        bevanda8.stampaBevande();
     }
 }

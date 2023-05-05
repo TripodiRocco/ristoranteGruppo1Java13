@@ -18,10 +18,10 @@ Secondi Piatti:
 -Carne
 
 Dessert:
--Tiramisu'al coding                                4.00€
--Parfait di mandorle e Stringhe                    5.00€
--Tortino morbido al cioccolato fondente #000000    3.20€
--Sorbetto al limone in tazza di array[]            2.00€
+-Tiramisu'al coding
+-Parfait di mandorle e Stringhe
+-Tortino morbido al cioccolato fondente #000000
+-Sorbetto al limone in tazza di array[]
 
 Bevande:
 - Acqua minerale
