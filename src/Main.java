@@ -6,6 +6,7 @@ public class Main {
         System.out.println(nameOfRestaurant);
 
         System.out.println();
+        System.out.println("Prova");
 
         Bevande.stampaBevande();
 
