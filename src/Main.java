@@ -5,9 +5,6 @@ public class Main {
         String nameOfRestaurant = "Ristorante ManJava";
         System.out.println(nameOfRestaurant);
 
-        System.out.println();
-        System.out.println("Prova");
-
         Bevande.stampaBevande();
 
     }
