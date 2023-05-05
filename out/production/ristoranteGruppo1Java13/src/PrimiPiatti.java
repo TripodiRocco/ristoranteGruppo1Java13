@@ -21,6 +21,5 @@ public class PrimiPiatti {
       }
       public void printPrimiPiatti() {
             System.out.println(this.firstDishes + "   € " + this.price);  // <-- ho messo tre tabs prima del simbolo '€' e una sola dopo
-
       }
 }

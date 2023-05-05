@@ -1,0 +1,34 @@
+Nome ristorante: ManJava
+
+Menù
+
+Primi Piatti:
+
+- Pasta in bianco                   10€
+- Trofie al pesto                   9€
+- Gnocchi alla romana               8€
+- Lasagne                           7€
+- Pappardelle al ragù di cinghiale  6€
+
+
+Secondi Piatti:
+-Merluzzo
+-Involtini di vitello
+-Tortino di zucchine
+-Carne
+
+Dessert:
+-Tiramisu'al coding
+-Parfait di mandorle e Stringhe
+-Tortino morbido al cioccolato fondente #000000
+-Sorbetto al limone in tazza di array[]
+
+Bevande:
+- Acqua minerale
+- Amari
+- Liquori
+- Caffè
+- Thè ed infusi
+- Coca-Cola
+- Fanta
+- Sprite
