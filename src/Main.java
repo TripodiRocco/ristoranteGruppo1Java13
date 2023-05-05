@@ -5,10 +5,16 @@ public class Main {
         String nameOfRestaurant = "Ristorante ManJava";
         System.out.println(nameOfRestaurant);
 
+
         //TODO eliminare tutte le chiamate statiche
         PrimiPiatti primiPiatti = new PrimiPiatti("Pasta", 10);
         PrimiPiatti primiPiatti2 = new PrimiPiatti("Pasta", 10);
         primiPiatti.printPrimiPiatti();
+
+        System.out.println();
+
+        Bevande.stampaBevande();
+
 
 
 
