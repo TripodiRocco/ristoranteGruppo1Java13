@@ -27,7 +27,7 @@ public class PrimiPiatti {
 
             this.price = price;
       }
-      public static void printPrimiPiatti() {
+      public void printPrimiPiatti() {
             PrimiPiatti primoPiatto = new PrimiPiatti("Pasta in bianco",5.00);
             System.out.println(primoPiatto.getDescription() + "                      € " + primoPiatto.getPrice());
 

@@ -24,8 +24,9 @@ public class Dessert {
     }
 
     public void printDessert(Dessert namePrice){
+        //TODO rivedere il concetto di this e di field con stato
         System.out.println("*****");
-        System.out.println(namePrice.getDessertName());
+        System.out.println(this.getDessertName());
         System.out.println("€ "+namePrice.getPrice());
         /*System.out.println("*****");*/
     }

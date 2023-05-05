@@ -5,13 +5,17 @@ public class Main {
         String nameOfRestaurant = "Ristorante ManJava";
         System.out.println(nameOfRestaurant);
 
-        PrimiPiatti.printPrimiPiatti();
+        //TODO eliminare tutte le chiamate statiche
+        PrimiPiatti primiPiatti = new PrimiPiatti("Pasta", 10);
+        PrimiPiatti primiPiatti2 = new PrimiPiatti("Pasta", 10);
+        primiPiatti.printPrimiPiatti();
 
 
 
 
 
-        Bevande.stampaBevande();
+        Bevande bevande = new Bevande("acqua",23);
+        bevande.stampaBevande();
         Dessert tiramisu = new Dessert("Tiramisu'", 4.00);
         Dessert parfait = new Dessert("Parfait di mandorle", 5.00);
         Dessert tortino = new Dessert("Tortino morbido al cioccolato fondente", 3.20);

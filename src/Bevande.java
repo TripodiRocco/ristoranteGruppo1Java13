@@ -23,9 +23,9 @@ public class Bevande {
         this.price = price;
     }
 
-     public static void stampaBevande(){
-        Bevande bevande = new Bevande("Acqua minerale", 5.00);
-        System.out.println(bevande.getDescription() + "                 " + "€ " + bevande.getPrice());
+     public void stampaBevande(){
+        //TODO rivedere e parlarne insieme tra di voi
+        System.out.println(this.description + "                 " + "€ " + bevande.price);
 
         bevande.setDescription("Amari");
         bevande.setPrice(8.00);
