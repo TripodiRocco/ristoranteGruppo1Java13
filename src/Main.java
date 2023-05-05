@@ -12,6 +12,7 @@ public class Main {
         primiPiatti.printPrimiPiatti();
 
         System.out.println();
+        System.out.println("Prova");
 
         Bevande.stampaBevande();
 
