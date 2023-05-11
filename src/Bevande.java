@@ -22,8 +22,8 @@ public class Bevande {
     public void setPrice(double price) {
         this.price = price;
     }
-
-     public void stampaBevande(){
-         System.out.println(this.description + "   € " + this.price);
+    //No metodi statici
+    public String printBevande(){
+        return "Bevanda : " + description + " ----- Price : " + price;
     }
 }

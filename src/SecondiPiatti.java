@@ -23,8 +23,7 @@ public class SecondiPiatti {
         this.price = price;
     }
 
-    //TODO il metodo di print deve essere fatto così
-    public void print(){
-        System.out.println(this.description + " price: " + this.price);
+    public String printSecondi(){
+        return "Secondo Piatto : " + description + " ----- price : " + price;
     }
 }
