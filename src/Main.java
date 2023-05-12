@@ -40,13 +40,16 @@ public class Main {
         bevande.add(cocaCola);
 
 
-        Comande comanda1 = new Comande(1, null, secondi, dessert, bevande);
+        /**
+         *  Comande comanda1 = new Comande(1, null, secondi, dessert, bevande);
+         *
+         *         comanda1.printComande();
+         *
+         *         Comande comanda2 = new Comande(6, primi, secondi, dessert, bevande);
+         *
+         *         comanda2.printComande();
+         */
 
-        comanda1.printComande();
-
-        Comande comanda2 = new Comande(6, primi, secondi, dessert, bevande);
-
-        comanda2.printComande();
 
 
         //SECONDO METODO CON INSERIMENTO DA SETTER (in questo modo si evita di avere valori null nel caso non si inserisca una portata)
@@ -56,12 +59,6 @@ public class Main {
         System.out.println("\nSECONDA STAMPA \n");
         Comande comanda3 = new Comande();
 
-        comanda3.setNumeroTavolo(12);
-        comanda3.setBevande(bevande);
-        comanda3.setPrimi(primi);
-        // comanda.setSecondi(secondi);
-        comanda3.setDessert(dessert);
-        comanda3.printComande();
 
     }
 }

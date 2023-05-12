@@ -23,7 +23,7 @@ public class Bevande {
         this.price = price;
     }
 
-     public void stampaBevande(){
-         System.out.println(this.description + "   € " + this.price);
+    public String printBevande(){
+        return "Bevanda : " + description + " ----- Price : " + price;
     }
 }

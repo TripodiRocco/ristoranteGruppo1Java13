@@ -1,38 +1,91 @@
-public class Menu {
-    public Menu(){
-        System.out.println("Menu: \n");
-        System.out.println("Primi Piatti:\n" +
-                "\n" +
-                "- Pasta in bianco                          10.00€\n" +
-                "- Trofie al pesto                          9.00€\n" +
-                "- Gnocchi alla romana                      8.00€\n" +
-                "- Lasagne                                  7.00€\n" +
-                "- Pappardelle al ragù di cinghiale         6.00€\n" +
-                "\n" +
-                "\n" +
-                "Secondi Piatti:\n" +
-                "-Merluzzo                                  7.00€\n" +
-                "-Involtini di vitello                      8.00€\n" +
-                "-Tortino di zucchine                       4.00€\n" +
-                "-Carne                                     8.00€\n" +
-                "\n" +
-                "Dessert:\n" +
-                "-Tiramisu'                                 4.00€\n" +
-                "-Crema di mandorle                         5.00€\n" +
-                "-Tortino morbido al cioccolato fondente    3.20€\n" +
-                "-Sorbetto al limone                        2.00€\n" +
-                "\n" +
-                "Bevande:\n" +
-                "- Acqua minerale                           2.00€ \n"   +
-                "- Amari                                    4.00€\n" +
-                "- Liquori                                  4.00€\n" +
-                "- Caffè                                    1.00€  \n" +
-                "- Thè ed infusi                            2.00€\n" +
-                "- Coca-Cola                                3.50€\n" +
-                "- Fanta                                    3.00€\n" +
-                "- Sprite                                   3.00€");
+import java.util.ArrayList;
 
-        System.out.println("");
+public class Menu {
+    private ArrayList<PrimiPiatti> primi;
+    private ArrayList<SecondiPiatti> secondi;
+    private ArrayList<Dessert> dessert;
+    private ArrayList<Bevande> bevande;
+    private static int numeroComanda = 0;
+    private int numeroTavolo;
+
+    public Menu() {
+        this.primi = new ArrayList<>();
+        this.secondi = new ArrayList<>();
+        this.bevande = new ArrayList<>();
+        this.dessert = new ArrayList<>();
+        this.numeroComanda++;
     }
+
+    public ArrayList<PrimiPiatti> getPrimi() {
+        return primi;
+    }
+
+    public ArrayList<SecondiPiatti> getSecondi() {
+        return secondi;
+    }
+
+    public ArrayList<Dessert> getDessert() {
+        return dessert;
+    }
+
+    public ArrayList<Bevande> getBevande() {
+        return bevande;
+    }
+
+    public static int getNumeroComanda() {
+        return numeroComanda;
+    }
+
+    public int getNumeroTavolo() {
+        return numeroTavolo;
+    }
+
+    public void setPrimi(ArrayList<PrimiPiatti> primi) {
+        this.primi = primi;
+    }
+
+    public void setSecondi(ArrayList<SecondiPiatti> secondi) {
+        this.secondi = secondi;
+    }
+
+    public void setDessert(ArrayList<Dessert> dessert) {
+        this.dessert = dessert;
+    }
+
+    public void setBevande(ArrayList<Bevande> bevande) {
+        this.bevande = bevande;
+    }
+
+    public void setNumeroTavolo(int numeroTavolo) {
+        this.numeroTavolo = numeroTavolo;
+    }
+
+
+    //TODO sistemare
+    public void printComande() {
+        System.out.println("Numero Tavolo : " + numeroTavolo);
+
+        for (PrimiPiatti p : primi) {
+            System.out.println(p.printPrimiPiatti());
+        }
+
+        System.out.println();
+        for (SecondiPiatti s : secondi) {
+            System.out.println(s.printSecondi());
+        }
+        System.out.println();
+
+        for (Dessert d : dessert) {
+            System.out.println(d.printDessert());
+        }
+        System.out.println();
+
+        for (Bevande b : bevande) {
+            System.out.println(b.printBevande());
+        }
+        System.out.println();
+        System.out.println("Numero di comande totali = " + numeroComanda);
+    }
+
 
 }

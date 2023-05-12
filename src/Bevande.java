@@ -22,7 +22,7 @@ public class Bevande {
     public void setPrice(double price) {
         this.price = price;
     }
-    //No metodi statici
+
     public String printBevande(){
         return "Bevanda : " + description + " ----- Price : " + price;
     }
