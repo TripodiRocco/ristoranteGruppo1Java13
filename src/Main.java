@@ -15,7 +15,7 @@ public class Main {
         PrimiPiatti penne = new PrimiPiatti("Penne al sugo", 8);
         PrimiPiatti paccheri = new PrimiPiatti("Paccheri allo scoglio", 16);
 
-        primi.add(penne);
+        menu.add(penne);
         primi.add(spaghetti);
         primi.add(paccheri);
 
