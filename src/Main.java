@@ -37,7 +37,7 @@ public class Main {
         Bevande cocaCola = new Bevande(("Coca cola"),4);
 
         bevande.add(acqua);
-        bevande.add(cocaCola);
+        menu.add(cocaCola);
 
 
         /**
@@ -56,8 +56,6 @@ public class Main {
 
         // Menu menu3 = new Menu(0, null, null, dessert, bevande);
 
-        System.out.println("\nSECONDA STAMPA \n");
-        Comande comanda3 = new Comande();
 
 
     }

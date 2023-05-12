@@ -6,7 +6,6 @@ public class Menu {
     private ArrayList<Dessert> dessert;
     private ArrayList<Bevande> bevande;
     private static int numeroComanda = 0;
-    private int numeroTavolo;
 
     public Menu() {
         this.primi = new ArrayList<>();
@@ -40,29 +39,12 @@ public class Menu {
         return numeroTavolo;
     }
 
-    public void setPrimi(ArrayList<PrimiPiatti> primi) {
-        this.primi = primi;
-    }
-
-    public void setSecondi(ArrayList<SecondiPiatti> secondi) {
-        this.secondi = secondi;
-    }
-
-    public void setDessert(ArrayList<Dessert> dessert) {
-        this.dessert = dessert;
-    }
-
-    public void setBevande(ArrayList<Bevande> bevande) {
-        this.bevande = bevande;
-    }
-
-    public void setNumeroTavolo(int numeroTavolo) {
-        this.numeroTavolo = numeroTavolo;
-    }
+    //TODO fare metodi add e remove
 
 
     //TODO sistemare
-    public void printComande() {
+    public void printMenu() {
+        //TODO nome menù e tipo quindi bisogna fare un enum del tipo(vegano, ecc ecc)
         System.out.println("Numero Tavolo : " + numeroTavolo);
 
         for (PrimiPiatti p : primi) {
