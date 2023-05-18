@@ -15,9 +15,9 @@ public class Main {
         PrimiPiatti penne = new PrimiPiatti("Penne al sugo", 8);
         PrimiPiatti paccheri = new PrimiPiatti("Paccheri allo scoglio", 16);
 
-        menu.add(penne);
-        primi.add(spaghetti);
-        primi.add(paccheri);
+        spaghetti.printPrimiPiatti();
+        penne.printPrimiPiatti();
+        paccheri.printPrimiPiatti();
 
 
         SecondiPiatti carne = new SecondiPiatti("Carne arrosto", 14);
@@ -37,7 +37,7 @@ public class Main {
         Bevande cocaCola = new Bevande(("Coca cola"),4);
 
         bevande.add(acqua);
-        menu.add(cocaCola);
+
 
 
         /**
@@ -51,10 +51,6 @@ public class Main {
          */
 
 
-
-        //SECONDO METODO CON INSERIMENTO DA SETTER (in questo modo si evita di avere valori null nel caso non si inserisca una portata)
-
-        // Menu menu3 = new Menu(0, null, null, dessert, bevande);
 
 
 
