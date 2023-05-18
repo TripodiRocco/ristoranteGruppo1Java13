@@ -1,26 +1,20 @@
 
 public class PrimoPiatto  extends Menu{
-    private String description;
-    private double price;
+    boolean alDente;
 
     public PrimoPiatto(String description, double price) {
-        this.description = description;
-        this.price = price;
+        super(description, price);
     }
 
-    public String getDescription() {
-        return description;
+    public boolean getIsAlDente() {
+        return alDente;
     }
-    public void setDescription(String description) {
-        this.description = description;
+
+    public void setAlDente(boolean alDente) {
+        this.alDente = alDente;
     }
-    public double getPrice() {
-        return price;
-    }
-    public void setPrice(double price) {
-        this.price = price;
-    }
+
     public void printPrimoPiatto() {
-        System.out.println("Primo Piatto : " + description + " ----- Price : " + price);
+        System.out.println("Primo Piatto : " + getDescription()+" ----- Price : " + getPrice());
     }
 }
