@@ -1,8 +1,11 @@
-public class Bevande {
+import java.util.ArrayList;
+
+public class Menu {
     private String description;
     private double price;
+    private ArrayList<Bevanda> bevande;
 
-    public Bevande(String description, double price) {
+    public Menu(String description, double price) {
         this.description = description;
         this.price = price;
     }
@@ -11,19 +14,29 @@ public class Bevande {
         return description;
     }
 
-    public double getPrice() {
-        return price;
-    }
-
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public double getPrice() {
+        return price;
     }
 
     public void setPrice(double price) {
         this.price = price;
     }
 
+<<<<<<< HEAD:src/Bevande.java
     public String printBevande(){
         return "Bevanda : " + description + " ----- Price : " + price;
+=======
+
+
+    public void printMenu(){
+        for (Bevanda b : bevande){
+            b.printBevanda();
+        }
+
+>>>>>>> featuresBevande:out/production/ristoranteGruppo1Java13/src/Menu.java
     }
 }

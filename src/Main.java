@@ -33,6 +33,10 @@ public class Main {
         dessert.add(torta);
         dessert.add(tortino);
 
+
+        Bevanda bevanda1 = new Bevanda("Acqua minerale", 1.00);
+        bevanda1.printBevanda();
+
         Bevande acqua = new Bevande("Acqua naturale", 2);
         Bevande cocaCola = new Bevande(("Coca cola"),4);
 
@@ -55,6 +59,7 @@ public class Main {
         //SECONDO METODO CON INSERIMENTO DA SETTER (in questo modo si evita di avere valori null nel caso non si inserisca una portata)
 
         // Menu menu3 = new Menu(0, null, null, dessert, bevande);
+
 
 
 
