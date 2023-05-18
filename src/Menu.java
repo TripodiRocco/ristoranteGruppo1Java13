@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 public class Menu {
-    private ArrayList<PrimiPiatti> primi;
+    private ArrayList<PrimoPiatto> primi;
     private ArrayList<SecondiPiatti> secondi;
     private ArrayList<Dessert> dessert;
     private ArrayList<Bevande> bevande;
@@ -15,7 +15,7 @@ public class Menu {
         this.numeroComanda++;
     }
 
-    public ArrayList<PrimiPiatti> getPrimi() {
+    public ArrayList<PrimoPiatto> getPrimi() {
         return primi;
     }
 
@@ -40,6 +40,8 @@ public class Menu {
     }
 
     //TODO fare metodi add e remove
+    PrimoPiatto.
+
 
 
     //TODO sistemare
@@ -47,23 +49,23 @@ public class Menu {
         //TODO nome menù e tipo quindi bisogna fare un enum del tipo(vegano, ecc ecc)
         System.out.println("Numero Tavolo : " + numeroTavolo);
 
-        for (PrimiPiatti p : primi) {
-            System.out.println(p.printPrimiPiatti());
+        for (PrimoPiatto p : primi) {
+            p.printPrimoPiatto();
         }
 
         System.out.println();
         for (SecondiPiatti s : secondi) {
-            System.out.println(s.printSecondi());
+            s.printSecondi();
         }
         System.out.println();
 
         for (Dessert d : dessert) {
-            System.out.println(d.printDessert());
+            d.printDessert();
         }
         System.out.println();
 
         for (Bevande b : bevande) {
-            System.out.println(b.printBevande());
+            b.printBevande();
         }
         System.out.println();
         System.out.println("Numero di comande totali = " + numeroComanda);

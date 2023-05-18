@@ -5,19 +5,19 @@ public class Main {
 
         Menu menu = new Menu();
 
-        ArrayList<PrimiPiatti> primi  = new ArrayList<>();
+        ArrayList<PrimoPiatto> primi  = new ArrayList<>();
         ArrayList<SecondiPiatti> secondi = new ArrayList<>();
         ArrayList<Dessert> dessert = new ArrayList<>();
         ArrayList<Bevande> bevande = new ArrayList<>();
 
 
-        PrimiPiatti spaghetti = new PrimiPiatti("Spaghetti al pomodoro", 10);
-        PrimiPiatti penne = new PrimiPiatti("Penne al sugo", 8);
-        PrimiPiatti paccheri = new PrimiPiatti("Paccheri allo scoglio", 16);
+        PrimoPiatto spaghetti = new PrimoPiatto("Spaghetti al pomodoro", 10);
+        PrimoPiatto penne = new PrimoPiatto("Penne al sugo", 8);
+        PrimoPiatto paccheri = new PrimoPiatto("Paccheri allo scoglio", 16);
 
-        spaghetti.printPrimiPiatti();
-        penne.printPrimiPiatti();
-        paccheri.printPrimiPiatti();
+        spaghetti.printPrimoPiatto();
+        penne.printPrimoPiatto();
+        paccheri.printPrimoPiatto();
 
 
         SecondiPiatti carne = new SecondiPiatti("Carne arrosto", 14);

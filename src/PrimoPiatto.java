@@ -1,5 +1,5 @@
 
-public class PrimoPiatto {
+public class PrimoPiatto  extends Menu{
     private String description;
     private double price;
 
@@ -20,7 +20,7 @@ public class PrimoPiatto {
     public void setPrice(double price) {
         this.price = price;
     }
-    public void printPrimiPiatti() {
+    public void printPrimoPiatto() {
         System.out.println("Primo Piatto : " + description + " ----- Price : " + price);
     }
 }

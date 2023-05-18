@@ -5,19 +5,19 @@ public class Main {
 
         Menu menu = new Menu();
 
-        ArrayList<PrimiPiatti> primi  = new ArrayList<>();
+        ArrayList<PrimoPiatto> primi  = new ArrayList<>();
         ArrayList<SecondiPiatti> secondi = new ArrayList<>();
         ArrayList<Dessert> dessert = new ArrayList<>();
         ArrayList<Bevande> bevande = new ArrayList<>();
 
 
-        PrimiPiatti spaghetti = new PrimiPiatti("Spaghetti al pomodoro", 10);
-        PrimiPiatti penne = new PrimiPiatti("Penne al sugo", 8);
-        PrimiPiatti paccheri = new PrimiPiatti("Paccheri allo scoglio", 16);
+        PrimoPiatto spaghetti = new PrimoPiatto("Spaghetti al pomodoro", 10);
+        PrimoPiatto penne = new PrimoPiatto("Penne al sugo", 8);
+        PrimoPiatto paccheri = new PrimoPiatto("Paccheri allo scoglio", 16);
 
-        primi.add(penne);
-        primi.add(spaghetti);
-        primi.add(paccheri);
+        spaghetti.printPrimoPiatto();
+        penne.printPrimoPiatto();
+        paccheri.printPrimoPiatto();
 
 
         SecondiPiatti carne = new SecondiPiatti("Carne arrosto", 14);
@@ -37,7 +37,7 @@ public class Main {
         Bevande cocaCola = new Bevande(("Coca cola"),4);
 
         bevande.add(acqua);
-        bevande.add(cocaCola);
+
 
 
         /**
@@ -52,12 +52,6 @@ public class Main {
 
 
 
-        //SECONDO METODO CON INSERIMENTO DA SETTER (in questo modo si evita di avere valori null nel caso non si inserisca una portata)
-
-        // Menu menu3 = new Menu(0, null, null, dessert, bevande);
-
-        System.out.println("\nSECONDA STAMPA \n");
-        Comande comanda3 = new Comande();
 
 
     }
