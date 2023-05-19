@@ -11,13 +11,13 @@ public class Main {
         Portata tortino = new Dessert("Tortino", "Cioccolato bianco", 4);
         Portata pesce = new SecondoPiatto("Pesce", "Merluzzo" , 12);
 
-        Menu menuDiCarne = new Menu(TipoMenu.CARNE);
+        Menu menuDiCarne = new Menu(TipoEnum.CARNE);
         menuDiCarne.addPortata(spaghetti);
         menuDiCarne.addPortata(carne);
         menuDiCarne.addPortata(acqua);
         menuDiCarne.addPortata(tortino);
 
-        Menu menuDiPesce = new Menu(TipoMenu.PESCE);
+        Menu menuDiPesce = new Menu(TipoEnum.PESCE);
         menuDiPesce.addPortata(spaghetti);
         menuDiPesce.addPortata(acqua);
         menuDiPesce.addPortata(tortino);

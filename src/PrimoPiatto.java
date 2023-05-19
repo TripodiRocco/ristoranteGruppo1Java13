@@ -16,6 +16,7 @@ public class PrimoPiatto  extends Portata {
 
 
     public void printPrimoPiatto() {
-        System.out.println( "Primo Piatto : " + nome + " Descrizione: " + getDescrizione() + " Prezzo: " + getPrezzo());
+        super.printPortata();
+        System.out.println(alDente);
     }
 }

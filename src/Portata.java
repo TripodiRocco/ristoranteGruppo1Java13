@@ -23,9 +23,9 @@ public abstract class Portata {
 
     //nota : implementare meglio
 
-    /*
+
     public void printPortata(){
         System.out.println(nome +" " + descrizione + " " + prezzo);
     }
-     */
+
 }

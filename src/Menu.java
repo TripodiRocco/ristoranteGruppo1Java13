@@ -3,10 +3,10 @@ import java.util.List;
 
 public class Menu {
     private String nomeMenu;
-    private final TipoMenu tipo;
+    private final TipoEnum tipo;
     private List<Portata> listaPortate;
 
-    public Menu(TipoMenu tipo){
+    public Menu(TipoEnum tipo){
         this.tipo = tipo;
         this.nomeMenu = nomeMenu;
         this.listaPortate = new ArrayList<>();
@@ -32,10 +32,14 @@ public class Menu {
         this.listaPortate = listaPortate;
     }
 
-    public TipoMenu getTipo() {
+    public TipoEnum getTipo() {
         return tipo;
     }
 
+
+    /**
+     *
+     */
     /*
     * Nota: stampa formattata come:
     *   PRIMI PIATTI:
