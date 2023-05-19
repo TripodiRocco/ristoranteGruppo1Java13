@@ -1,38 +1,75 @@
 import java.util.ArrayList;
+import java.util.List;
 
 public class Menu {
+    private String nomeMenu;
+    private final TipoMenu tipo;
+    private List<Portata> listaPortate;
 
-    private String description;
-    private double price;
-    private ArrayList<Bevanda> bevande;
-    private ArrayList<PrimoPiatto> primi;
-    public Menu(String description, double price) {
-        this.description = description;
-        this.price = price;
+    public Menu(TipoMenu tipo){
+        this.tipo = tipo;
+        this.nomeMenu = nomeMenu;
+        this.listaPortate = new ArrayList<>();
     }
 
-    public String getDescription() {
-        return description;
+    public void addPortata(Portata portata){
+        listaPortate.add(portata);
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public String getNomeMenu() {
+        return nomeMenu;
     }
 
-    public double getPrice() {
-        return price;
+    public List<Portata> getListaPortate() {
+        return listaPortate;
     }
 
-    public void setPrice(double price) {
-        this.price = price;
+    public void setNomeMenu(String nomeMenu) {
+        this.nomeMenu = nomeMenu;
     }
 
-    public void printMenu() {
-        for (Bevanda b : bevande) {
-            b.printBevanda();
+    public void setListaPortate(List<Portata> listaPortate) {
+        this.listaPortate = listaPortate;
+    }
+
+    public TipoMenu getTipo() {
+        return tipo;
+    }
+
+    /*
+    * Nota: stampa formattata come:
+    *   PRIMI PIATTI:
+    *       primo 1
+    *       primo 2
+    *   SECONDI PIATTI:
+    *       secondo 1
+    *       secondo 2
+    *
+    *                   trovare soluzione....
+    * */
+    public void printMenu(){
+        switch (tipo){
+            case PESCE -> System.out.println("Menu di pesce");
+            case CARNE -> System.out.println("Menu di carne");
+            case VEGANO -> System.out.println("Menu vegano");
+            case VEGETARIANO -> System.out.println("Menu vegetariano");
         }
-        for (PrimoPiatto p : primi) {
-            p.printPrimoPiatto();
+        for (Portata p : listaPortate) {
+            if (p instanceof PrimoPiatto) {
+                ((PrimoPiatto) p).printPrimoPiatto();
+            }
+            if (p instanceof SecondoPiatto) {
+                ((SecondoPiatto) p).printSecondoPiatto();
+            }
+            if (p instanceof Bevanda) {
+                ((Bevanda) p).printBevanda();
+            }
+            if(p instanceof Dessert){
+                ((Dessert) p).printDessert();
+            }
         }
     }
+
+
+
 }

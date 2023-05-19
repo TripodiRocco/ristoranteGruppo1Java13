@@ -1,9 +1,9 @@
 
-public class PrimoPiatto  extends Menu{
+public class PrimoPiatto  extends Portata {
     boolean alDente;
 
-    public PrimoPiatto(String description, double price) {
-        super(description, price);
+    public PrimoPiatto(String nome,String descrizione, double prezzo) {
+        super(nome, descrizione, prezzo);
     }
 
     public boolean getIsAlDente() {
@@ -14,7 +14,8 @@ public class PrimoPiatto  extends Menu{
         this.alDente = alDente;
     }
 
+
     public void printPrimoPiatto() {
-        System.out.println("Primo Piatto : " + getDescription()+" ----- Price : " + getPrice());
+        System.out.println( "Primo Piatto : " + nome + " Descrizione: " + getDescrizione() + " Prezzo: " + getPrezzo());
     }
 }

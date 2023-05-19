@@ -1,9 +1,9 @@
-public class Bevanda extends Menu {
+public class Bevanda extends Portata {
 
     private double capacityInCl;
 
-    public Bevanda(String description, double price) {
-        super(description, price);
+    public Bevanda(String nome, String descrizione, double prezzo ) {
+        super(nome, descrizione, prezzo);
     }
 
     public double getCapacityInCl() {
@@ -14,7 +14,9 @@ public class Bevanda extends Menu {
         this.capacityInCl = capacityInCl;
     }
 
-    public void printBevanda(){
-        System.out.println("Bevanda : " + getDescription() + "_____price : " + getPrice());
+
+    public void printBevanda() {
+        System.out.println( "Bevanda : " + getNome() + " Descrizione: " + getDescrizione() + " Prezzo: " + getPrezzo());
     }
 }
+
