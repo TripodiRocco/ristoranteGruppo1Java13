@@ -25,7 +25,7 @@ public abstract class Portata {
 
 
     public void printPortata(){
-        System.out.println(nome +" " + descrizione + " " + prezzo);
+        System.out.println("Nome del piatto: "+nome +"\n" + "Descrizione del piatto: "+descrizione + "\n " + prezzo+"€");
     }
 
 }

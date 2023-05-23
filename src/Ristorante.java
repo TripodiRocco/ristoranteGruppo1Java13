@@ -31,13 +31,4 @@ public class Ristorante{
         menu.add(m);
     }
 
-
-
-    public void printMenu() {
-        System.out.println("Ristorante: \n\t" +  nomeRistorante + "\n\n");
-        for (Menu m : menu) {
-            m.printMenu();
-            System.out.println();
-        }
-    }
 }

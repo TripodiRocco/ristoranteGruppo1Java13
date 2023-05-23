@@ -1,31 +1,24 @@
 public class Main {
     public static void main(String[] args) {
-/*
-        PrimoPiatto spaghetti = new PrimoPiatto("Spaghetti", "Pomodoro fresco", 10);
-        SecondoPiatto carne = new SecondoPiatto("Filetto", "Pepe verde", 14.5);
-        Bevanda acqua = new Bevanda("Acqua", "Naturale", 2.5);
-*/
-        Portata spaghetti = new PrimoPiatto("Spaghetti", "Pomodoro fresco", 10);
-        Portata carne = new SecondoPiatto("Filetto", "Pepe verde", 14.5);
-        Portata acqua = new Bevanda("Acqua", "Naturale", 2.5);
-        Portata tortino = new Dessert("Tortino", "Cioccolato bianco", 4);
-        Portata pesce = new SecondoPiatto("Pesce", "Merluzzo" , 12);
 
-        Menu menuDiCarne = new Menu(TipoEnum.CARNE);
-        menuDiCarne.addPortata(spaghetti);
-        menuDiCarne.addPortata(carne);
-        menuDiCarne.addPortata(acqua);
-        menuDiCarne.addPortata(tortino);
+        Portata dessert1 = new Dessert("Tortino", "tortino ripieno di ciocolato bianco", 4.00,true);
+        Portata pasta1 = new PrimoPiatto("Pasta al tonno","la pasta che fai quando non hai voglia di cucinare",2.50,false);
+        Portata carne1 = new SecondoPiatto("carne","T-bone", 13,true);
+        Portata bevanda1 = new Bevanda("Coca cola","è una coca cola", 2.5,33);
 
-        Menu menuDiPesce = new Menu(TipoEnum.PESCE);
-        menuDiPesce.addPortata(spaghetti);
-        menuDiPesce.addPortata(acqua);
-        menuDiPesce.addPortata(tortino);
 
-        Ristorante develhope = new Ristorante( "DevelHope");
-        develhope.addMenu(menuDiCarne);
-        develhope.addMenu(menuDiPesce);
 
-        develhope.printMenu();
+        Menu menu1 = new Menu("Menu Di Prova 1");
+        menu1.addPortata(carne1);
+        menu1.addPortata(dessert1);
+        menu1.addPortata(pasta1);
+        menu1.addPortata(bevanda1);
+
+        dessert1.printPortata();
+        pasta1.printPortata();
+
+        System.out.println("----------------------");
+
+        menu1.printMenu();
     }
 }

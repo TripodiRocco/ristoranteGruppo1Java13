@@ -1,5 +1,5 @@
 public enum TipoEnum {
 
-    CARNE, PESCE, VEGANO, VEGETARIANO
+    CARNE, PESCE, VEGANO, VEGETARIANO,DOLCE;
 
 }

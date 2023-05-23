@@ -1,9 +1,14 @@
 public class Bevanda extends Portata {
-
+    final TipoPortata bevande = TipoPortata.BEVANDE;
     private double capacityInCl;
 
-    public Bevanda(String nome, String descrizione, double prezzo ) {
+    public Bevanda(String nome, String descrizione, double prezzo,double capacityInCl ) {
         super(nome, descrizione, prezzo);
+        this.capacityInCl=capacityInCl;
+    }
+
+    public TipoPortata getBevande() {
+        return bevande;
     }
 
     public double getCapacityInCl() {
@@ -15,8 +20,10 @@ public class Bevanda extends Portata {
     }
 
 
-    public void printBevanda() {
-        System.out.println( "Bevanda : " + getNome() + " Descrizione: " + getDescrizione() + " Prezzo: " + getPrezzo());
+    @Override
+    public void printPortata() {
+        super.printPortata();
+        System.out.println("il contenuto è pari a: "+ capacityInCl+"ml");
     }
 }
 

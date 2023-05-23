@@ -1,9 +1,11 @@
 
 public class PrimoPiatto  extends Portata {
-    boolean alDente;
+    final TipoPortata primi = TipoPortata.PRIMI;
+    private boolean alDente;
 
-    public PrimoPiatto(String nome,String descrizione, double prezzo) {
+    public PrimoPiatto(String nome,String descrizione, double prezzo,boolean alDente){
         super(nome, descrizione, prezzo);
+        this.alDente=alDente;
     }
 
     public boolean getIsAlDente() {
@@ -14,9 +16,13 @@ public class PrimoPiatto  extends Portata {
         this.alDente = alDente;
     }
 
-
-    public void printPrimoPiatto() {
+    @Override
+    public void printPortata() {
         super.printPortata();
-        System.out.println(alDente);
+        if (alDente){
+            System.out.println("è al dente");
+        }else {
+            System.out.println("non si puo mangiare");
+        }
     }
 }

@@ -2,39 +2,37 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Menu {
+
     private String nomeMenu;
-    private final TipoEnum tipo;
     private List<Portata> listaPortate;
 
-    public Menu(TipoEnum tipo){
-        this.tipo = tipo;
+    public Menu(String nomeMenu){
         this.nomeMenu = nomeMenu;
         this.listaPortate = new ArrayList<>();
-    }
-
-    public void addPortata(Portata portata){
-        listaPortate.add(portata);
     }
 
     public String getNomeMenu() {
         return nomeMenu;
     }
 
+    public void setNomeMenu(String nomeMenu) {
+        this.nomeMenu = nomeMenu;
+    }
+
+    public void addPortata(Portata portata){
+        listaPortate.add(portata);
+    }
+
+
     public List<Portata> getListaPortate() {
         return listaPortate;
     }
 
-    public void setNomeMenu(String nomeMenu) {
-        this.nomeMenu = nomeMenu;
-    }
 
     public void setListaPortate(List<Portata> listaPortate) {
         this.listaPortate = listaPortate;
     }
 
-    public TipoEnum getTipo() {
-        return tipo;
-    }
 
 
     /**
@@ -52,28 +50,35 @@ public class Menu {
     *                   trovare soluzione....
     * */
     public void printMenu(){
-        switch (tipo){
-            case PESCE -> System.out.println("Menu di pesce");
-            case CARNE -> System.out.println("Menu di carne");
-            case VEGANO -> System.out.println("Menu vegano");
-            case VEGETARIANO -> System.out.println("Menu vegetariano");
-        }
-        for (Portata p : listaPortate) {
-            if (p instanceof PrimoPiatto) {
-                ((PrimoPiatto) p).printPrimoPiatto();
+
+            System.out.println("PRIMI PIATTI: \n");
+            for (Portata p : listaPortate) {
+                if (p.getClass() == PrimoPiatto.class) {
+                    p.printPortata();
+                }
             }
-            if (p instanceof SecondoPiatto) {
-                ((SecondoPiatto) p).printSecondoPiatto();
+            System.out.println("\nSECONDI PIATTI: \n");
+            for (Portata p: listaPortate) {
+                    if (p.getClass() == SecondoPiatto.class){
+                        p.printPortata();
+                    }
             }
-            if (p instanceof Bevanda) {
-                ((Bevanda) p).printBevanda();
+            System.out.println("\nDESSERT: \n");
+            for (Portata p: listaPortate) {
+                    if (p.getClass() == Dessert.class){
+                        p.printPortata();
+                    }
             }
-            if(p instanceof Dessert){
-                ((Dessert) p).printDessert();
+            System.out.println("\nBEVANDE: \n");
+            for (Portata p: listaPortate) {
+                    if (p.getClass() == Bevanda.class){
+                        p.printPortata();
+                    }
             }
         }
     }
 
 
 
-}
+
+
