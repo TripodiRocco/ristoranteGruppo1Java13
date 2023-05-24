@@ -14,10 +14,12 @@ public class Main {
         menu1.addPortata(pasta1);
         menu1.addPortata(bevanda1);
 
-        dessert1.printPortata();
-        pasta1.printPortata();
+
+        Ristorante ristorante = new Ristorante("Develhope", "Chef Develhoper", 45);
+        ristorante.printInfoRistorante();
 
         System.out.println("----------------------");
+
 
         menu1.printMenu();
     }
