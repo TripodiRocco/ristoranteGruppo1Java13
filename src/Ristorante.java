@@ -3,9 +3,14 @@ import java.util.List;
 
 public class Ristorante{
 
+    //TODO prenotazione serve un numero capienza massima, poi serve fare una struttura che leghi due oggetti: tavolo e cliente
+    //quindi creare le classi tavolo e cliente con i loro attributi(aiuto: i tavoli devono avere un enum o un valore per il numero
+    //di posti, il controlla da fare è di evitare l'overbooking
     private String nomeRistorante;
     private String nomeMenu;
     private String nomeChef;
+
+    //TODO sistemare solo oggetti
     private int capienza;
 
     private List<Menu> menu;

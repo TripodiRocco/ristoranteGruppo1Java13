@@ -11,13 +11,13 @@ public class Main {
 
 
 
-        Menu menuDiCarne = new Menu("Menu di carne", TipoEnum.CARNE);
+        Menu menuDiCarne = new Menu("Menu di carne", TipoEnum.CARNE, ColorEnum.ANSI_RED);
         menuDiCarne.addPortata(spaghetti);
         menuDiCarne.addPortata(carne);
         menuDiCarne.addPortata(acqua);
         menuDiCarne.addPortata(tortino);
 
-        Menu menuDiPesce = new Menu("Menu di pesce", TipoEnum.PESCE);
+        Menu menuDiPesce = new Menu("Menu di pesce", TipoEnum.PESCE,ColorEnum.ANSI_RED);
         menuDiPesce.addPortata(spaghetti);
         menuDiPesce.addPortata(acqua);
         menuDiPesce.addPortata(tortino);

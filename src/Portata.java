@@ -28,4 +28,9 @@ public abstract class Portata {
         System.out.println("Nome del piatto: "+nome +"\n" + "Descrizione del piatto: "+descrizione + "\n" + "Prezzo: " + prezzo+"€");
     }
 
+    //TODO sistemare
+    public void printPortata(ColorEnum colorEnum){
+        System.out.println(colorEnum + "Nome del piatto: "+nome +"\n" + "Descrizione del piatto: "+descrizione + "\n" + "Prezzo: " + prezzo+"€");
+    }
+
 }
