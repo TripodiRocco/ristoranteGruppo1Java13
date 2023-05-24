@@ -21,7 +21,7 @@ public class PrimoPiatto  extends Portata {
 
     @Override
     public void printPortata() {
-        System.out.println("Menu " + ANSI_CYAN + TipoEnum.PESCE + ANSI_RESET);
+        System.out.println("Menu " + ANSI_CYAN + TipoEnum.PESCE + "\n" + ANSI_RESET);
 
         super.printPortata();
         if (alDente){

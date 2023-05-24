@@ -4,10 +4,18 @@ import java.util.List;
 public class Menu {
 
     private String nomeMenu;
+
+    private TipoEnum tipoMenu;
     private List<Portata> listaPortate;
 
     public Menu(String nomeMenu){
         this.nomeMenu = nomeMenu;
+        this.listaPortate = new ArrayList<>();
+    }
+
+    public Menu(String nomeMenu, TipoEnum tipoMenu){
+        this.nomeMenu = nomeMenu;
+        this.tipoMenu = tipoMenu;
         this.listaPortate = new ArrayList<>();
     }
 
@@ -50,6 +58,7 @@ public class Menu {
     *                   trovare soluzione....
     * */
     public void printMenu(){
+
 
             System.out.println("PRIMI PIATTI: \n");
             for (Portata p : listaPortate) {

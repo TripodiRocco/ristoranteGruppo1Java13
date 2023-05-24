@@ -51,7 +51,12 @@ public class Ristorante{
     }
 
     public void printInfoRistorante(){
-        System.out.println("Ristorante: " + nomeRistorante + "\n" + "Di: " + nomeChef + "\n" + "N.posti: " +  capienza);
+        System.out.println("Ristorante: " + nomeRistorante + "\n" + "Di: " + nomeChef + "\n" + "N.posti: " +  capienza + "\n");
+
+        for(Menu m : menu){
+            m.printMenu();
+            System.out.println();
+        }
     }
 
 }
