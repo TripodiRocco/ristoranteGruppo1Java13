@@ -59,6 +59,14 @@ public class Menu {
     * */
     public void printMenu(){
 
+        System.out.print("TIPO MENU: ");
+            switch (tipoMenu){
+
+                case CARNE -> System.out.println("Menu di carne\n");
+                case PESCE -> System.out.println("Menu di pesce\n");
+                case VEGANO -> System.out.println("Menu vegano\n");
+                case VEGETARIANO -> System.out.println("Menu vegetariano\n");
+            }
 
             System.out.println("PRIMI PIATTI: \n");
             for (Portata p : listaPortate) {

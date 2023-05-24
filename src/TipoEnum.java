@@ -1,6 +1,6 @@
 public enum TipoEnum {
 
-    CARNE,
+    CARNE ,
     PESCE,
     VEGANO,
     VEGETARIANO,
