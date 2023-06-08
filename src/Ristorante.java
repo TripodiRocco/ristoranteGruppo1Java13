@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 public class Ristorante{
@@ -14,6 +15,9 @@ public class Ristorante{
     private int capienza;
 
     private List<Menu> menu;
+
+    private HashMap<Cliente, Tavolo> prenotazione = new HashMap<>();
+
     public Ristorante(String nomeRistorante, String nomeChef, int capienza){
         this.nomeRistorante = nomeRistorante;
         this.menu = new ArrayList<>();
@@ -64,4 +68,15 @@ public class Ristorante{
         }
     }
 
+        public void addPrenotazione(Cliente cliente, Tavolo tavolo){
+            this.prenotazione.put(cliente, tavolo);
+        }
+
+       /* public void stampaPrenotazioni(){
+            for (Cliente c: prenotazione.keySet()) {
+                System.out.println(c + " " + prenotazione.get(c));
+            }
+        }
+
+        */
 }

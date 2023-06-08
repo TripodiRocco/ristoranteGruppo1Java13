@@ -1,3 +1,7 @@
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.nio.Buffer;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -29,6 +33,12 @@ public class Main {
         develhope.printInfoRistorante();
 
 
+        develhope.addPrenotazione(new Cliente("Vincenzo", "Merola", "V.merola", 348),
+        new Tavolo((TipoTavolo.TAVOLO_DA_4), 4));
 
+        develhope.addPrenotazione(new Cliente("Giuseppe", "Bronzellino", "G.Bronzellino", 555),
+                new Tavolo((TipoTavolo.TAVOLO_DA_4), 3));
+
+        develhope.stampaPrenotazioni();
     }
 }

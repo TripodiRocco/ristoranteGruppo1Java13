@@ -7,6 +7,7 @@ public class Tavolo {
         this.numeroTavolo = numeroTavolo;
     }
 
+
     public int getNumeroTavolo() {
         return numeroTavolo;
     }
