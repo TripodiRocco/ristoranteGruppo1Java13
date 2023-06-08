@@ -15,5 +15,4 @@ public enum TipoEnum {
         this.name = name;
     }
 
-
 }

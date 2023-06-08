@@ -39,33 +39,10 @@ public class Menu {
         this.listaPortate = listaPortate;
     }
 
-
-
-    /**
-     *
-     */
-    /*
-    * Nota: stampa formattata come:
-    *   PRIMI PIATTI:
-    *       primo 1
-    *       primo 2
-    *   SECONDI PIATTI:
-    *       secondo 1
-    *       secondo 2
-    *
-    *                   trovare soluzione....
-    * */
     public void printMenu(){
 
         System.out.print("TIPO MENU: ");
-        /*
-            switch (tipoMenu){
-                case CARNE -> System.out.println("Menu di carne\n");
-                case PESCE -> System.out.println("Menu di pesce\n");
-                case VEGANO -> System.out.println("Menu vegano\n");
-                case VEGETARIANO -> System.out.println("Menu vegetariano\n");
-            }
-         */
+
             System.out.println(tipoMenu.getName());
 
             System.out.println("PRIMI PIATTI: \n");
