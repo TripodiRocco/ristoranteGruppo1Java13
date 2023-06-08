@@ -72,11 +72,10 @@ public class Ristorante{
             this.prenotazione.put(cliente, tavolo);
         }
 
-       /* public void stampaPrenotazioni(){
+       public void stampaPrenotazioni(){
             for (Cliente c: prenotazione.keySet()) {
                 System.out.println(c + " " + prenotazione.get(c));
             }
         }
 
-        */
 }

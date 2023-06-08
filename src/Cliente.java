@@ -4,6 +4,11 @@ public class Cliente {
     private String eMail;
     private int numeroTelefono;
 
+    @Override
+    public String toString() {
+        return nome + " " + cognome + ":";
+    }
+
     public String getNome() {
         return nome;
     }

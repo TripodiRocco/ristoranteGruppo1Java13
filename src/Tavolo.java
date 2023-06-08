@@ -1,9 +1,14 @@
 public class Tavolo {
-    private TipoTavolo numeroPosti;
+    private TipoTavolo tipoTavolo;
     private int numeroTavolo;
 
-    public Tavolo(TipoTavolo numeroPosti, int numeroTavolo) {
-        this.numeroPosti = numeroPosti;
+    @Override
+    public String toString() {
+        return tipoTavolo.getName();
+    }
+
+    public Tavolo(TipoTavolo tipoTavolo, int numeroTavolo) {
+        this.tipoTavolo = tipoTavolo;
         this.numeroTavolo = numeroTavolo;
     }
 
@@ -16,11 +21,11 @@ public class Tavolo {
         this.numeroTavolo = numeroTavolo;
     }
 
-    public TipoTavolo getNumeroPosti() {
-        return numeroPosti;
+    public TipoTavolo getTipoTavolo() {
+        return tipoTavolo;
     }
 
-    public void setNumeroPosti(TipoTavolo numeroPosti) {
-        this.numeroPosti = numeroPosti;
+    public void setTipoTavolo(TipoTavolo tipoTavolo) {
+        this.tipoTavolo = tipoTavolo;
     }
 }
