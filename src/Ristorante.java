@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class Ristorante{
 
@@ -77,5 +78,11 @@ public class Ristorante{
                 System.out.println(c + " " + prenotazione.get(c));
             }
         }
+
+        public void cancellaPrenotazione(Cliente cliente){
+            System.out.println("Cancello il cliente " + cliente.getNome());
+            this.prenotazione.remove(cliente);
+        }
+
 
 }

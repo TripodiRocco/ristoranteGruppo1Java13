@@ -33,12 +33,26 @@ public class Main {
         develhope.printInfoRistorante();
 
 
-        develhope.addPrenotazione(new Cliente("Vincenzo", "Merola", "V.merola", 348),
-        new Tavolo((TipoTavolo.TAVOLO_DA_4), 4));
+        Cliente cliente1 = new Cliente("Vincenzo", "Merola", "V.merola", 348);
+        Cliente cliente2 = new Cliente("Giuseppe", "Bronzellino", "G.Bronzellino", 333);
 
-        develhope.addPrenotazione(new Cliente("Giuseppe", "Bronzellino", "G.Bronzellino", 555),
-                new Tavolo((TipoTavolo.TAVOLO_DA_4), 3));
 
+        develhope.addPrenotazione(cliente1,new Tavolo((TipoTavolo.TAVOLO_DA_4), 4));
+
+        develhope.addPrenotazione(cliente2, new Tavolo((TipoTavolo.TAVOLO_DA_4), 3));
+
+        //STAMPO PRENOTAZIONI
+        System.out.println("PRENOTAZIONI:  ");
         develhope.stampaPrenotazioni();
+        System.out.println();
+
+        //CANCELLO CLIENTE
+        System.out.println("CANCELLO PRENOTAZIONE");
+        develhope.cancellaPrenotazione(cliente1);
+        System.out.println();
+
+        System.out.println("RISTAMPO PRENOTAZIONI");
+        develhope.stampaPrenotazioni();
+
     }
 }
