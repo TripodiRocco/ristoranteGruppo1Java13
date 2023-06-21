@@ -16,7 +16,7 @@ public class DAOsecondoPiatto {
         Statement statement = connection.createStatement();
 
         String createQuery =
-                "CREATE TABLE IF NOT EXIST SECONDI_PIATTI " +
+                "CREATE TABLE IF NOT EXISTS SECONDI_PIATTI " +
                         "( ID INT AUTO_INCREMENT, " +
                         "nome VARCHAR (255)" +
                         "descrizione VARCHAR (255) " +
