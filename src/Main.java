@@ -12,8 +12,19 @@ public class Main {
         Portata acqua = new Bevanda("Acqua", "Naturale", 2.5, 0.5);
         Portata tortino = new Dessert("Tortino", "Cioccolato bianco", 4, true);
         Portata pesce = new SecondoPiatto("Pesce", "Merluzzo" , 12, false);
+/*
 
+        DAOportata portata = new DAOsecondoPiatto();
+        portata.createTable();
+        ecc...
+        quindi si potrebbe creare una classe DAOportata astratta ed estendere
+        DAOsecondoPiatto da DAOportata ??????????
 
+        DAOsecondoPiatto sc = new DAOsecondoPiatto();
+        sc.createTable();
+        sc.insertSecondoPiatto();
+        sc.readSecondiPiatti();
+*/
 
         Menu menuDiCarne = new Menu("Menu di carne", TipoEnum.CARNE, ColorEnum.ANSI_RED);
         menuDiCarne.addPortata(spaghetti);
