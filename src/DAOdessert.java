@@ -1,7 +1,6 @@
 import java.sql.*;
 
 public class DAOdessert {
-    public class DAObevanda {
         private static final String URL_DB  = "URL_DATABASE_LOCALE";
         private static final String ID_USER = "root";
         private static final String PASSWORD = "PASSWORD";
@@ -33,7 +32,7 @@ public class DAOdessert {
             }catch (SQLException ex){
                 throw new RuntimeException(ex);
             }
-            System.out.println("LA TABELLA BEVANDE E' STATA CREATA ");
+            System.out.println("LA TABELLA DESSERT E' STATA CREATA ");
         }
 
 
@@ -44,7 +43,7 @@ public class DAOdessert {
                 connection = DriverManager.getConnection(URL_DB,ID_USER,PASSWORD);
                 Statement statement = connection.createStatement();
 
-                String insertQuery = "INSERT INTO BEVANDE" +
+                String insertQuery = "INSERT INTO DESSERT" +
                         "(nome, descrizione, prezzo, lattosio) VALUES (' " +
                         dessert.getNome() + " ', ' " +
                         dessert.getDescrizione() + " ',' " +
@@ -107,7 +106,7 @@ public class DAOdessert {
                 Statement statement = connection.createStatement();
 
 
-                String updateQuery= "UPDATE bevande"+
+                String updateQuery= "UPDATE dessert"+
                         " SET nome='"+dessert.getNome()+"',"+
                         " descrizione= "+dessert.getDescrizione()+", prezzo='"+dessert.getPrezzo() +
                         "', capacityInCl='"+ dessert.isLattosio()+
@@ -121,7 +120,7 @@ public class DAOdessert {
             }catch (SQLException ex){
                 throw new RuntimeException(ex);
             }
-            System.out.println("MODIFICA BEVANDE AVVENUTA CON SUCCESSO!");
+            System.out.println("MODIFICA DESSERT AVVENUTA CON SUCCESSO!");
         }
 
 
@@ -148,5 +147,3 @@ public class DAOdessert {
         }
 
     }
-
-}
