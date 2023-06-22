@@ -5,8 +5,6 @@ import java.nio.Buffer;
 public class Main {
     public static void main(String[] args) {
 
-
-
         Portata spaghetti = new PrimoPiatto("Spaghetti", "Pomodoro fresco", 10, true);
         Portata carne = new SecondoPiatto("Filetto", "Pepe verde", 14.5, true);
         Portata acqua = new Bevanda("Acqua", "Naturale", 2.5, 0.5);
