@@ -1,6 +1,7 @@
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.nio.Buffer;
+import java.sql.Timestamp;
 
 public class Main {
     public static void main(String[] args) {
@@ -41,27 +42,43 @@ public class Main {
 
         develhope.printInfoRistorante();
 
+        Tavolo tavolo1 = new Tavolo(TipoTavolo.TAVOLO_DA_4, 1);
+
 
         Cliente cliente1 = new Cliente("Vincenzo", "Merola", "V.merola", 348);
         Cliente cliente2 = new Cliente("Giuseppe", "Bronzellino", "G.Bronzellino", 333);
+        Cliente cliente3 = new Cliente("Rocco", "Tripodi", "R.tripodi", 399);
+        Cliente cliente4 = new Cliente("Pietro", "Benedicenti", "P.benedicenti", 345);
 
-
-        develhope.addPrenotazione(cliente1,new Tavolo((TipoTavolo.TAVOLO_DA_4), 4));
-
-        develhope.addPrenotazione(cliente2, new Tavolo((TipoTavolo.TAVOLO_DA_4), 3));
+        Cliente cliente5 = new Cliente("Vincenzo" ,"Merola", "V.merola", 348);
 
         //STAMPO PRENOTAZIONI
         System.out.println("PRENOTAZIONI:  ");
+
+
+
+        String t1 = "27-06-2023";
+        String t2 = "28-06-2023";
+
+        Prenotazione prenotazione = new Prenotazione(cliente1, new Tavolo((TipoTavolo.TAVOLO_DA_4), 3));
+        prenotazione.addPrenotazione(cliente2,  new Tavolo((TipoTavolo.TAVOLO_DA_4), 3));
+
+
+        Prenotazione prenotazione2 = new Prenotazione(cliente3, tavolo1);
+        prenotazione2.addPrenotazione(cliente4, tavolo1);
+        prenotazione2.addPrenotazione(cliente5, tavolo1);
+
+        develhope.addPrenotazione(t1, prenotazione);
+        develhope.addPrenotazione(t2, prenotazione2);
+
+
         develhope.stampaPrenotazioni();
         System.out.println();
 
-        //CANCELLO CLIENTE
-        System.out.println("CANCELLO PRENOTAZIONE");
-        develhope.cancellaPrenotazione(cliente1);
-        System.out.println();
+        develhope.cancellaPrenotazioneCliente(t1, cliente1);
 
-        System.out.println("RISTAMPO PRENOTAZIONI");
+        System.out.println("RISTAMPO LE PRENOTAZIONI DOPO ELIMINAZIONE\n");
+
         develhope.stampaPrenotazioni();
-
     }
 }
