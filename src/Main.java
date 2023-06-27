@@ -59,6 +59,7 @@ public class Main {
 
         String t1 = "27-06-2023";
         String t2 = "28-06-2023";
+        String t3 = "29-06-2023";
 
         Prenotazione prenotazione = new Prenotazione(cliente1, new Tavolo((TipoTavolo.TAVOLO_DA_4), 3));
         prenotazione.addPrenotazione(cliente2,  new Tavolo((TipoTavolo.TAVOLO_DA_4), 3));
@@ -71,6 +72,9 @@ public class Main {
         develhope.addPrenotazione(t1, prenotazione);
         develhope.addPrenotazione(t2, prenotazione2);
 
+        Prenotazione prenotazione3 = new Prenotazione();
+        prenotazione3.addPrenotazione(cliente3,tavolo1);
+        develhope.addPrenotazione(t3,prenotazione3);
 
         develhope.stampaPrenotazioni();
         System.out.println();

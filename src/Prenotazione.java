@@ -6,7 +6,9 @@ public class Prenotazione {
 
     private HashMap<Cliente, Tavolo> prenotazione ;
 
-
+    public Prenotazione(){
+        this.prenotazione = new HashMap<>();
+    }
     public Prenotazione(Cliente cliente, Tavolo tavolo){
        this.prenotazione = new HashMap<>();
        prenotazione.put(cliente, tavolo);
