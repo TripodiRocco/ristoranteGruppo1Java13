@@ -25,6 +25,10 @@ public class Tavolo {
         return tipoTavolo;
     }
 
+    public int getTavolo(){
+        return tipoTavolo.getCapienza();
+    }
+
     public void setTipoTavolo(TipoTavolo tipoTavolo) {
         this.tipoTavolo = tipoTavolo;
     }

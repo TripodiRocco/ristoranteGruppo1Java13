@@ -1,9 +1,6 @@
-import java.sql.Time;
-import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 public class Ristorante {
 
@@ -14,21 +11,25 @@ public class Ristorante {
     private String nomeMenu;
     private String nomeChef;
 
-    //TODO sistemare solo oggetti
-    private int capienza;
 
+    //TODO sistemare solo oggetti
+    private int numeroTavoli;
+    private int numeroTavoliDisponibili;
     private List<Menu> menu;
 
    // private HashMap<Cliente, Tavolo> prenotazione = new HashMap<>();
-
     private HashMap<String, Prenotazione> listaPrenotazioni = new HashMap<>();
 
+    private HashMap<String, Integer> capienza = new HashMap<>();
 
-    public Ristorante(String nomeRistorante, String nomeChef, int capienza){
+
+    //HashMap<String, HashMap<Cliente, Tavolo> > pre;
+
+    public Ristorante(String nomeRistorante, String nomeChef, int numeroTavoli){
         this.nomeRistorante = nomeRistorante;
         this.menu = new ArrayList<>();
         this.nomeChef = nomeChef;
-        this.capienza = capienza;
+        this.numeroTavoli = numeroTavoli;
     }
 
     public String getNomeRistorante() {
@@ -53,12 +54,15 @@ public class Ristorante {
         this.nomeChef = nomeChef;
     }
 
-    public int getCapienza() {
-        return capienza;
+    public int getNumeroTavoli() {
+        return numeroTavoliDisponibili;
     }
 
-    public void setCapienza(int capienza) {
-        this.capienza = capienza;
+    public int getNumeroTavoliDisponibili(String dataPrenotazione){
+        return capienza.get(dataPrenotazione);
+    }
+    public void setNumeroTavoli(int numeroTavoli) {
+        this.numeroTavoli = numeroTavoli;
     }
 
     public void addMenu(Menu m) {
@@ -66,7 +70,7 @@ public class Ristorante {
     }
 
     public void printInfoRistorante(){
-        System.out.println("Ristorante: " + nomeRistorante + "\n" + "Di: " + nomeChef + "\n" + "N.posti: " +  capienza + "\n");
+        System.out.println("Ristorante: " + nomeRistorante + "\n" + "Di: " + nomeChef + "\n" + "N.posti: " + numeroTavoli + "\n");
 
         for(Menu m : menu){
             m.printMenu();
@@ -74,24 +78,28 @@ public class Ristorante {
         }
     }
 
-    /*
-        public void addPrenotazione(Cliente cliente, Tavolo tavolo){
-            this.prenotazione.put(cliente, tavolo);
-        }
 
-       public void stampaPrenotazioni(){
-            for (Cliente c: prenotazione.keySet()) {
-                System.out.println(c + " " + prenotazione.get(c));
-            }
-        }
 
-        public void cancellaPrenotazione(Cliente cliente){
-            System.out.println("Cancello il cliente " + cliente.getNome());
-            this.prenotazione.remove(cliente);
-        }
-    */
+    //SISTEMARE IL CONTROLLO SULL'OVERBOOKING
     public  void addPrenotazione(String data, Prenotazione prenotazione){
-        this.listaPrenotazioni.put(data, prenotazione);
+        numeroTavoliDisponibili = numeroTavoli;
+
+        capienza.put(data, numeroTavoliDisponibili -= prenotazione.getTipoTavoloPrenotato());
+
+        if((capienza.get(data) != null) && capienza.get(data) == 0  ||
+                prenotazione.getTipoTavoloPrenotato() > capienza.get(data)){
+                        prenotazione.setFull(true);
+                             System.out.println("PIENO");
+        } else{
+            this.listaPrenotazioni.put(data, prenotazione);
+            capienza.put(data, numeroTavoliDisponibili -= prenotazione.getTipoTavoloPrenotato());
+        }
+
+
+
+
+       //Aggiungere contollo
+
     }
 
     public void stampaPrenotazioni(){
@@ -105,4 +113,5 @@ public class Ristorante {
 
         listaPrenotazioni.get(data).cancellaPrenotazione(cliente);
     }
+
 }
