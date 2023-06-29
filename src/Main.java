@@ -103,7 +103,7 @@ public class Main {
         System.out.println();
 
 
-        develhope.cancellaPrenotazioneCliente(t1, cliente1);
+        develhope.cancellaPrenotazioneCliente(t1, prenotazione1);
         System.out.println("RISTAMPO LE PRENOTAZIONI DOPO ELIMINAZIONE\n");
 
         develhope.stampaPrenotazioni();

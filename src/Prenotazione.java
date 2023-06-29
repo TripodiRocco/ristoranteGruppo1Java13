@@ -1,8 +1,8 @@
-
 import java.util.HashMap;
 
 public class Prenotazione {
 
+    Cliente cliente;
     private int tipoTavoloPrenotato;
 
     private boolean isFull = false;
@@ -16,13 +16,13 @@ public class Prenotazione {
         this.prenotazione = new HashMap<>();
     }
     public Prenotazione(Cliente cliente, Tavolo tavolo){
-       this.prenotazione = new HashMap<>();
-       if(!isFull) {
-           prenotazione.put(cliente, tavolo);
-           this.tipoTavoloPrenotato += tavolo.getTavolo();
-       }else{
-           System.out.println("\nNESSUN TAVOLO DISPONIBILE\n");
-       }
+        this.prenotazione = new HashMap<>();
+        if(!isFull) {
+            prenotazione.put(cliente, tavolo);
+            this.tipoTavoloPrenotato += tavolo.getTavolo();
+        }else{
+            System.out.println("\nNESSUN TAVOLO DISPONIBILE\n");
+        }
     }
 
 
@@ -37,6 +37,7 @@ public class Prenotazione {
 
     public void addPrenotazione(Cliente cliente, Tavolo tavolo){
         if(!isFull) {
+            this.cliente = cliente;
             this.prenotazione.put(cliente, tavolo);
             this.tipoTavoloPrenotato += tavolo.getTavolo();
         }else{
@@ -44,21 +45,22 @@ public class Prenotazione {
         }
     }
 
+    public Cliente getCliente() {
+        return cliente;
+    }
 
-       public void stampaPrenotazione(){
-           for  (Cliente c: prenotazione.keySet()) {
-                System.out.println(c + " " + prenotazione.get(c));
-            }
+    public void stampaPrenotazione(){
+        for  (Cliente c: prenotazione.keySet()) {
+            System.out.println(c + " " + prenotazione.get(c));
         }
+    }
 
-        public Object cancellaPrenotazione(Cliente cliente){
-            System.out.println("Cancello il cliente " + cliente.getNome());
-           // this.prenotazione.remove(cliente);
+    public void cancellaPrenotazione(Cliente cliente){
+        System.out.println("Cancello il cliente " + cliente.getNome());
+        this.prenotazione.remove(cliente);
 
-
-            isFull = false;
-            return null;
-        }
+        isFull = false;
+    }
 
 
 }

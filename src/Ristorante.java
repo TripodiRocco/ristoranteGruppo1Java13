@@ -105,15 +105,12 @@ public class Ristorante {
         }
     }
 
-    public void cancellaPrenotazioneCliente(String data, Cliente cliente){
-        listaPrenotazioni.get(data).cancellaPrenotazione(cliente);
-
-        //devo eliminare il tavolo
-
-        //listaPrenotazioni.remove(data, listaPrenotazioni.get(data).cancellaPrenotazione(cliente));
-
-        capienza.put(data, capienza.get(data) + listaPrenotazioni.get(data).getTipoTavoloPrenotato());
-
+    public void cancellaPrenotazioneCliente(String data, Prenotazione prenotazione){
+        int x = prenotazione.getPrenotazione().get(prenotazione.getCliente()).getTavolo();
+        System.out.println("N TAVOLO = " + x);
+        listaPrenotazioni.get(data).cancellaPrenotazione(prenotazione.getCliente());
+        capienza.put(data, capienza.get(data) + x);
     }
+
 
 }
