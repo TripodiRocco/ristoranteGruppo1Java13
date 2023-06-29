@@ -102,8 +102,19 @@ public class Main {
         System.out.println("TAVOLI DISPONIBILI AL "+ t5 + " " + develhope.getNumeroTavoliDisponibili(t5));
         System.out.println();
 
+
         develhope.cancellaPrenotazioneCliente(t1, cliente1);
         System.out.println("RISTAMPO LE PRENOTAZIONI DOPO ELIMINAZIONE\n");
+
         develhope.stampaPrenotazioni();
+        System.out.println();
+        System.out.println("TAVOLI DISPONIBILI AL "+ t1 + " " + develhope.getNumeroTavoliDisponibili(t1));
+        System.out.println("TAVOLI DISPONIBILI AL " + t2 + " " + develhope.getNumeroTavoliDisponibili(t2));
+        System.out.println("TAVOLI DISPONIBILI AL "+ t3 + " " + develhope.getNumeroTavoliDisponibili(t3));
+        System.out.println("TAVOLI DISPONIBILI AL "+ t4 + " " + develhope.getNumeroTavoliDisponibili(t4));
+        System.out.println("TAVOLI DISPONIBILI AL "+ t5 + " " + develhope.getNumeroTavoliDisponibili(t5));
+        System.out.println();
+
+
     }
 }

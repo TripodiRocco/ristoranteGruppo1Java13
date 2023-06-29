@@ -78,29 +78,25 @@ public class Ristorante {
         }
     }
 
-
-
-    //SISTEMARE IL CONTROLLO SULL'OVERBOOKING
-    public  void addPrenotazione(String data, Prenotazione prenotazione){
+    public void addPrenotazione(String data, Prenotazione prenotazione){
         numeroTavoliDisponibili = numeroTavoli;
 
         capienza.put(data, numeroTavoliDisponibili -= prenotazione.getTipoTavoloPrenotato());
 
-        if((capienza.get(data) != null) && capienza.get(data) == 0  ||
-                prenotazione.getTipoTavoloPrenotato() > capienza.get(data)){
-                        prenotazione.setFull(true);
-                             System.out.println("PIENO");
-        } else{
-            this.listaPrenotazioni.put(data, prenotazione);
-            capienza.put(data, numeroTavoliDisponibili -= prenotazione.getTipoTavoloPrenotato());
+        if((prenotazione.getTipoTavoloPrenotato() > capienza.get(data)) && capienza.get(data) != null){
+            //System.out.println("capienza = " + prenotazione.getPrenotazione() + capienza.get(data));
+
+            //!!!!!!!!!!!!!!!!!! VEDERE BENE !!!!!!!!!!!!!!!!!!
+            capienza.put(data, capienza.get(data) - capienza.get(data));
+            System.out.println("ERRORE NELLA PRENOTAZIONE "+ prenotazione.getPrenotazione() +  " TAVOLI NON DISPONIBILI");
+            prenotazione.setFull(false);
+
+        }else{
+               this.listaPrenotazioni.put(data, prenotazione);
         }
 
-
-
-
-       //Aggiungere contollo
-
     }
+
 
     public void stampaPrenotazioni(){
         for(String s : listaPrenotazioni.keySet()){
@@ -110,8 +106,14 @@ public class Ristorante {
     }
 
     public void cancellaPrenotazioneCliente(String data, Cliente cliente){
-
         listaPrenotazioni.get(data).cancellaPrenotazione(cliente);
+
+        //devo eliminare il tavolo
+
+        //listaPrenotazioni.remove(data, listaPrenotazioni.get(data).cancellaPrenotazione(cliente));
+
+        capienza.put(data, capienza.get(data) + listaPrenotazioni.get(data).getTipoTavoloPrenotato());
+
     }
 
 }

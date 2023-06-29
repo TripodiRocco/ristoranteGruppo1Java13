@@ -5,18 +5,17 @@ public class Prenotazione {
 
     private int tipoTavoloPrenotato;
 
+    private boolean isFull = false;
+
     public void setFull(boolean full) {
         isFull = full;
     }
-
-    private boolean isFull = false;
     private HashMap<Cliente, Tavolo> prenotazione ;
 
     public Prenotazione(){
         this.prenotazione = new HashMap<>();
     }
     public Prenotazione(Cliente cliente, Tavolo tavolo){
-
        this.prenotazione = new HashMap<>();
        if(!isFull) {
            prenotazione.put(cliente, tavolo);
@@ -24,7 +23,6 @@ public class Prenotazione {
        }else{
            System.out.println("\nNESSUN TAVOLO DISPONIBILE\n");
        }
-
     }
 
 
@@ -41,6 +39,8 @@ public class Prenotazione {
         if(!isFull) {
             this.prenotazione.put(cliente, tavolo);
             this.tipoTavoloPrenotato += tavolo.getTavolo();
+        }else{
+            System.out.println("Impossibile prenotare. Tavoli non disponibili");
         }
     }
 
@@ -51,10 +51,13 @@ public class Prenotazione {
             }
         }
 
-        public void cancellaPrenotazione(Cliente cliente){
+        public Object cancellaPrenotazione(Cliente cliente){
             System.out.println("Cancello il cliente " + cliente.getNome());
-            this.prenotazione.remove(cliente);
+           // this.prenotazione.remove(cliente);
+
+
             isFull = false;
+            return null;
         }
 
 
