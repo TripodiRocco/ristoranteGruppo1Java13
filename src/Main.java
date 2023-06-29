@@ -2,6 +2,7 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.nio.Buffer;
 import java.sql.SQLException;
+import java.sql.SQLOutput;
 import java.sql.Timestamp;
 
 public class Main {
@@ -13,6 +14,7 @@ public class Main {
         Portata acqua = new Bevanda("Acqua", "Naturale", 2.5, 0.5);
         Portata tortino = new Dessert("Tortino", "Cioccolato bianco", 4, true);
         Portata pesce = new SecondoPiatto("Pesce", "Merluzzo" , 12, false);
+
 
 
   /*      DAOportata portata = new DAOsecondoPiatto();
@@ -118,11 +120,21 @@ public class Main {
         System.out.println();
 
         DAOprimoPiatto primo = new DAOprimoPiatto();
+        //Testiamo tutti i metodi della classe Daoprimipiatti
         //primo.createTable();
         //primo.insertPrimoPiatto((PrimoPiatto)spaghetto );
         //primo.readPrimiPiatti();
         //primo.updateTable((PrimoPiatto)spaghetti ,((PrimoPiatto) spaghetti).getId_primopiatto());
         //primo.deletePrimoPiatto(spaghetti.getNome());
+
+        DAOsecondoPiatto secondo = new DAOsecondoPiatto();
+
+        //Testiamo tutti i metodi della classe Daoprimipiatti
+        /*secondo.createTable();
+        secondo.insertSecondoPiatto((SecondoPiatto) carne);
+        secondo.insertSecondoPiatto((SecondoPiatto) pesce);
+        secondo.updateTable((SecondoPiatto) carne,((SecondoPiatto) pesce).getId_secondoPiatto());
+        secondo.deleteSecondoPiatto(carne.getNome());*/
 
 
     }

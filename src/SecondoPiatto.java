@@ -1,6 +1,6 @@
 public class SecondoPiatto extends Portata {
 
-    static int id_secondoPiatto;
+    int id_secondoPiatto = id_portata;
     final TipoPortata secondi = TipoPortata.SECONDI;
     boolean alSangue;
 
@@ -8,7 +8,6 @@ public class SecondoPiatto extends Portata {
     public SecondoPiatto(String nome, String descrizione, double prezzo, boolean alSangue){
         super(nome, descrizione, prezzo);
         this.alSangue=alSangue;
-        id_secondoPiatto++;
     }
 
     public int getId_secondoPiatto(){

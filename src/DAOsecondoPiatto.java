@@ -1,9 +1,9 @@
 import java.sql.*;
 
 public class DAOsecondoPiatto {
-    private static final String URL_DB  = "URL_DATABASE_LOCALE";
+    private static final String URL_DB  = "jdbc:mysql://127.0.0.1:3306/db_ristorante";
     private static final String ID_USER = "root";
-    private static final String PASSWORD = "PASSWORD";
+    private static final String PASSWORD = "password";
 
     public void createTable() {
 

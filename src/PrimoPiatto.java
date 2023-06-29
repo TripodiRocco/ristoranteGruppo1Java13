@@ -1,6 +1,6 @@
 
 public class PrimoPiatto  extends Portata {
-    static int id_primopiatto;
+    int id_primopiatto= id_portata;
     final TipoPortata primi = TipoPortata.PRIMI;
     private boolean alDente;
 
@@ -8,7 +8,6 @@ public class PrimoPiatto  extends Portata {
     public PrimoPiatto(String nome,String descrizione, double prezzo,boolean alDente){
         super(nome, descrizione, prezzo);
         this.alDente=alDente;
-        id_primopiatto++;
     }
 
     public int getId_primopiatto() {

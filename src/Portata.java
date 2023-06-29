@@ -2,11 +2,13 @@ public abstract class Portata {
     protected String nome;
     protected String descrizione;
     protected double prezzo;
+    static int id_portata= 0;
 
     public Portata(String nome, String descrizione, double prezzo){
         this.nome = nome;
         this.descrizione = descrizione;
         this.prezzo = prezzo;
+        id_portata++;
     }
 
     public String getNome() {
