@@ -1,11 +1,22 @@
 
 public class PrimoPiatto  extends Portata {
+    static int id_primopiatto;
     final TipoPortata primi = TipoPortata.PRIMI;
     private boolean alDente;
+
 
     public PrimoPiatto(String nome,String descrizione, double prezzo,boolean alDente){
         super(nome, descrizione, prezzo);
         this.alDente=alDente;
+        id_primopiatto++;
+    }
+
+    public int getId_primopiatto() {
+        return id_primopiatto;
+    }
+
+    public void setId_primopiatto(int id_primopiatto) {
+        this.id_primopiatto = id_primopiatto;
     }
 
     public boolean getIsAlDente() {

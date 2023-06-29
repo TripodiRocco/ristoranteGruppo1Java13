@@ -16,6 +16,7 @@ public class Prenotazione {
         this.prenotazione = new HashMap<>();
     }
     public Prenotazione(Cliente cliente, Tavolo tavolo){
+        this.cliente = cliente;
         this.prenotazione = new HashMap<>();
         if(!isFull) {
             prenotazione.put(cliente, tavolo);

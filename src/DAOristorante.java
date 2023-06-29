@@ -1,11 +1,11 @@
 import java.sql.*;
 
-public class DAOristorante {
-    private static final String URL_DB = "127.0.0.1";
+public class DAOristorante  {
+    private static final String URL_DB = "jdbc:mysql://localhost:3306/DB_RISTORANTE";
     private static final String ID_USER = "root";
     private static final String PASSWORD = "password";
 
-    public void createTable() {
+    public  void createTableRistoranti() throws SQLException{
         Connection connection = null;
 
         try {
@@ -15,8 +15,8 @@ public class DAOristorante {
             Statement statement = connection.createStatement();
 
             String createQuery = ""
-                    + "CREATE TABLE RISTORANTE( "
-                    + "  ID_RISTORANTE INT, "
+                    + "CREATE TABLE RISTORANTI( "
+                    + "  ID_RISTORANTE INT AUTO_INCREMENT, "
                     + "  NOME_RISTORANTE VARCHAR(255), "
                     + "  NOME_CHEF VARCHAR (255), "
                     + "  CAPIENZA INT, "

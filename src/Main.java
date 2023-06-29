@@ -1,19 +1,21 @@
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.nio.Buffer;
+import java.sql.SQLException;
 import java.sql.Timestamp;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws SQLException {
 
         Portata spaghetti = new PrimoPiatto("Spaghetti", "Pomodoro fresco", 10, true);
+        Portata spaghetto = new PrimoPiatto("spaghettone","allo scoglio", 12,true);
         Portata carne = new SecondoPiatto("Filetto", "Pepe verde", 14.5, true);
         Portata acqua = new Bevanda("Acqua", "Naturale", 2.5, 0.5);
         Portata tortino = new Dessert("Tortino", "Cioccolato bianco", 4, true);
         Portata pesce = new SecondoPiatto("Pesce", "Merluzzo" , 12, false);
-/*
 
-        DAOportata portata = new DAOsecondoPiatto();
+
+  /*      DAOportata portata = new DAOsecondoPiatto();
         portata.createTable();
         ecc...
         quindi si potrebbe creare una classe DAOportata astratta ed estendere
@@ -114,6 +116,13 @@ public class Main {
         System.out.println("TAVOLI DISPONIBILI AL "+ t4 + " " + develhope.getNumeroTavoliDisponibili(t4));
         System.out.println("TAVOLI DISPONIBILI AL "+ t5 + " " + develhope.getNumeroTavoliDisponibili(t5));
         System.out.println();
+
+        DAOprimoPiatto primo = new DAOprimoPiatto();
+        //primo.createTable();
+        //primo.insertPrimoPiatto((PrimoPiatto)spaghetto );
+        //primo.readPrimiPiatti();
+        //primo.updateTable((PrimoPiatto)spaghetti ,((PrimoPiatto) spaghetti).getId_primopiatto());
+        //primo.deletePrimoPiatto(spaghetti.getNome());
 
 
     }
