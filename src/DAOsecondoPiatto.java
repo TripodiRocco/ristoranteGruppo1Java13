@@ -15,15 +15,15 @@ public class DAOsecondoPiatto {
         //vedere questa riga
         Statement statement = connection.createStatement();
 
-        String createQuery =
-                "CREATE TABLE IF NOT EXISTS SECONDI_PIATTI " +
-                        "( ID INT AUTO_INCREMENT, " +
-                        "nome VARCHAR (255)" +
-                        "descrizione VARCHAR (255) " +
-                        "prezzo DOUBLE" +
-                        "alSangue BOOLEAN" +
-                        "PRIMARY KEY (ID)" +
-                        " );";
+            String createQuery = ""
+                    + "create table if not exists secondi_piatti( "
+                    + "id_secondopiatto int , "
+                    + "nome varchar(255), "
+                    + "descrizione varchar(255), "
+                    + "prezzo double, "
+                    + "alSangue boolean, "
+                    + "primary key (id_secondopiatto) "
+                    + ")";
 
         statement.executeUpdate(createQuery);
         statement.close();
@@ -43,12 +43,14 @@ public class DAOsecondoPiatto {
             connection = DriverManager.getConnection(URL_DB,ID_USER,PASSWORD);
             Statement statement = connection.createStatement();
 
-            String insertQuery = "INSERT INTO SECONDI_PIATTI" +
-                    "(nome, descrizione, prezzo, alSangue) VALUES (' " +
-                    secondoPiatto.getNome() + " ', ' " +
-                    secondoPiatto.getDescrizione() + " ',' " +
-                    secondoPiatto.getPrezzo() + " ',' " +
-                    secondoPiatto.isAlSangue() + " '); ";
+
+            String insertQuery  = "INSERT INTO SECONDI_PIATTI (id_secondopiatto,nome, descrizione, prezzo, alSangue) VALUES " +
+                    "('"+
+                    secondoPiatto.getId_secondoPiatto() + "', '" +
+                    secondoPiatto.getNome() + "', '" +
+                    secondoPiatto.getDescrizione() + "', " +
+                    secondoPiatto.getPrezzo() + ", " +
+                    secondoPiatto.isAlSangue() + ")";
 
             statement.executeUpdate(insertQuery);
             statement.close();
@@ -109,11 +111,17 @@ public class DAOsecondoPiatto {
 
             //utilizzare l'id nella condizione di modifica????
 
-            String updateQuery= "UPDATE secondipiatti"+
+            String updateQuery2= "UPDATE secondipiatti"+
                     " SET nome='"+secondoPiatto.getNome()+"',"+
                     " descrizione= "+secondoPiatto.getDescrizione()+", prezzo='"+secondoPiatto.getPrezzo() +
                     "', alSangue='"+ secondoPiatto.isAlSangue()+
                     " WHERE ID="+ID+";";
+            String updateQuery =  "UPDATE secondi_piatti SET " +
+                    "nome = '" + secondoPiatto.getNome() +
+                    "', descrizione = '" +secondoPiatto.getDescrizione() +
+                    "', prezzo = " + secondoPiatto.getPrezzo()+
+                    ", alSangue = " + secondoPiatto.isAlSangue() +
+                    " WHERE id_secondopiatto = " + ID;
 
             statement.executeUpdate(updateQuery);
             statement.close();

@@ -89,7 +89,7 @@ public class Ristorante {
             //!!!!!!!!!!!!!!!!!! VEDERE BENE !!!!!!!!!!!!!!!!!!
             capienza.put(data, capienza.get(data) - capienza.get(data));
             System.out.println("ERRORE NELLA PRENOTAZIONE "+ prenotazione.getPrenotazione() +  " TAVOLI NON DISPONIBILI");
-            prenotazione.setFull(false);
+            prenotazione.setFull(true);
 
         }else{
                this.listaPrenotazioni.put(data, prenotazione);
