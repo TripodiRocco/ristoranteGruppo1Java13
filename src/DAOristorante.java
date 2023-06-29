@@ -3,7 +3,7 @@ import java.sql.*;
 public class DAOristorante {
     private static final String URL_DB = "127.0.0.1";
     private static final String ID_USER = "root";
-    private static final String PASSWORD = "PASSWORD";
+    private static final String PASSWORD = "password";
 
     public void createTable() {
         Connection connection = null;
